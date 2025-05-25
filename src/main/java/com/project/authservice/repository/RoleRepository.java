@@ -1,5 +1,9 @@
 package com.project.authservice.repository;
 
-public class RoleRepository {
+import com.project.authservice.entity.Role;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface RoleRepository extends JpaRepository<Role, Integer> {
+
+    Role findByName(String name);
 }
